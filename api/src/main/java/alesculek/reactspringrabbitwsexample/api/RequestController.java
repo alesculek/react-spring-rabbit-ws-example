@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController("/api/v1/")
+@RestController
 public class RequestController {
 
-	@RequestMapping(value = "/request/process/", method = RequestMethod.POST)
+	@RequestMapping(value = "/v1/request/process/", method = RequestMethod.POST)
 	public ResponseEntity<ProcessResponse> index(@RequestBody List<String> serialNumbers) {
 		ProcessResponse processResponse = new ProcessResponse();
 		processResponse.totalCnt = serialNumbers.size();

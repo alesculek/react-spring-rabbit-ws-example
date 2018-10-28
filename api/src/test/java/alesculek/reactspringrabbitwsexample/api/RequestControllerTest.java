@@ -37,7 +37,7 @@ public class RequestControllerTest {
 		ObjectWriter writer = mapper.writer().withDefaultPrettyPrinter();
 
 		MockHttpServletRequestBuilder rb = MockMvcRequestBuilders
-				.post("/request/process/")
+				.post("/v1/request/process/")
 				.accept(MediaType.APPLICATION_JSON)
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(writer.writeValueAsString(numbers));
