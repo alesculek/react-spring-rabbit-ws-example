@@ -4,7 +4,7 @@ WORKDIR /opt/
 ADD pom.xml ./
 RUN mvn -B dependency:resolve-plugins dependency:resolve
 ADD ./ ./
-RUN mvn package
+RUN mvn clean && mvn package
 
 FROM openjdk:11-jre as runner
 WORKDIR /opt/
